@@ -1,0 +1,41 @@
+{
+  "name": "@veksa/protobuf-generator",
+  "version": "1.0.1",
+  "packageManager": "yarn@4.4.1",
+  "main": "./dist/cjs/protobufGenerator.cjs",
+  "types": "./dist/protobufGenerator.d.mts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/protobufGenerator.d.mts",
+      "import": "./dist/protobufGenerator.mjs",
+      "default": "./dist/cjs/protobufGenerator.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsup",
+    "compile": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "yarn lint --cache --fix",
+      "yarn test --bail --findRelatedTests"
+    ],
+    "**/*.{json,md}": [
+      "yarn format"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@veksa/protobuf-parser": "1.0.1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "target": "es2015",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es2020"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ],
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "jsx": "react",
+    "noUnusedLocals": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": []
+}
